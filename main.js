@@ -8,18 +8,25 @@ function lookdiscounts() {
     }
 
     let discountvalue = budget * 0.2;
-    let discountedPrice = budget - discountvalue;
+    let discountedprice = budget - discountvalue;
+
 
     out.innerHTML =
-        "<div class=\"container\">" +
+    `
+    "<div class=\"container\">" +
         "<h3>Recommended Laptops/PCs:</h3>" +
-        "<p>Original budget: ₱" + budget.toFixed(2) + "</p>" +
-        "<p>20% discount: ₱" + discountvalue.toFixed(2) + "</p>" +
+        "<p>Original budget: $" + budget.toFixed(2) + "</p>" +
+        "<p>20% discount: $" + discountvalue.toFixed(2) + "</p>" +
         "<ul>" +
-        "<li>Laptop A - Price: ₱" + discountedPrice.toFixed(2) + "</li>" +
-        "<li>PC B - Price: ₱" + discountedPrice.toFixed(2) + "</li>" +
-        "<li>Laptop C - Price: ₱" + discountedPrice.toFixed(2) + "</li>" +
+        "<li>Laptop A - Price: $" + discountedprice.toFixed(2) + "</li>" +
+        "<li>PC B - Price: $" + discountedprice.toFixed(2) + "</li>" +
+        "<li>Laptop C - Price: $" + discountedprice.toFixed(2) + "</li>" +
         "</ul>" +
-        "</div>";
+        "</div>"
+        "<input type=\"button\" id=\"eligible-discounts\" value=\"Eligible Discounts\" class=\"btn btn-danger\">";
+        
+    `
 }
+
+
 
